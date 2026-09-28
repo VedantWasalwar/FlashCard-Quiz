@@ -147,5 +147,5 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 ---
 
 <div align="center">
-  <sub>Built with ❤️ by <b>Vedant Wasalwar</b> for CodeAlpha Task 1</sub>
+  <sub>Develop ❤️ by <b>Vedant Wasalwar</b></sub>
 </div>
