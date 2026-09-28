@@ -15,9 +15,9 @@
 
   ### 📥 Direct App Download (Android APK)
 
-  [![Download APK](https://img.shields.io/badge/🚀_Download_Release_APK-Direct_Google_Drive-22c55e?style=for-the-badge&logo=android&logoColor=white)](https://drive.google.com/uc?export=download&id=YOUR_GOOGLE_DRIVE_FILE_ID_HERE)
+  [![Download APK](https://img.shields.io/badge/🚀_Download_Release_APK-Direct_Google_Drive-22c55e?style=for-the-badge&logo=android&logoColor=white)](https://drive.google.com/uc?export=download&id=1sSRfFIlbXhKBODuzEk85bt7JF9dfq7Jw)
 
-  > 💡 **Note**: Replace `YOUR_GOOGLE_DRIVE_FILE_ID_HERE` with your actual Google Drive File ID after uploading `app-release.apk`!
+  > 📲 Click the badge above to download the official **`app-release.apk`** directly to your Android device!
 
 </div>
 
