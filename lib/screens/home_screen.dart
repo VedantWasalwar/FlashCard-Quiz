@@ -66,15 +66,20 @@ class HomeScreen extends StatelessWidget {
                           ],
                         ),
                         Container(
-                          padding: const EdgeInsets.all(10),
+                          width: 44,
+                          height: 44,
                           decoration: BoxDecoration(
-                            color: AppColors.primary.withValues(alpha: 0.1),
                             shape: BoxShape.circle,
+                            border: Border.all(
+                              color: AppColors.primary.withValues(alpha: 0.2),
+                              width: 2,
+                            ),
                           ),
-                          child: const Icon(
-                            Icons.psychology_rounded,
-                            color: AppColors.primary,
-                            size: 28,
+                          child: ClipOval(
+                            child: Image.asset(
+                              'assets/images/app_logo.png',
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ],
