@@ -1,160 +1,151 @@
-# FlashCard Quiz - Mobile Learning Application 🎓📱
+<div align="center">
 
-![Flutter](https://img.shields.io/badge/Flutter-3.38.3-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-3.10.1-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Task](https://img.shields.io/badge/CodeAlpha-Task%201-blueviolet?style=for-the-badge)
+  <img src="assets/images/app_logo.png" alt="FlashCard Quiz Logo" width="120" height="120" style="border-radius: 24px;" />
 
-**FlashCard Quiz** is a complete, modern, startup-quality flashcard learning application built with **Flutter** and **Material 3** for the **CodeAlpha App Development Internship (Task 1)**.
+  # 🎴 FlashCard Quiz App
+
+  **A modern, interactive, and beautifully designed cross-platform Flashcard Quiz & Learning Telemetry App built with Flutter.**
+
+  [![Flutter Version](https://img.shields.io/badge/Flutter-v3.38.3-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
+  [![Dart](https://img.shields.io/badge/Dart-v3.10.1-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
+  [![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20Web%20%7C%20Windows-brightgreen?style=for-the-badge)](https://flutter.dev)
+  [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+
+  ---
+
+  ### 📥 Direct App Download (Android APK)
+
+  [![Download APK](https://img.shields.io/badge/🚀_Download_Release_APK-Direct_Google_Drive-22c55e?style=for-the-badge&logo=android&logoColor=white)](https://drive.google.com/uc?export=download&id=YOUR_GOOGLE_DRIVE_FILE_ID_HERE)
+
+  > 💡 **Note**: Replace `YOUR_GOOGLE_DRIVE_FILE_ID_HERE` with your actual Google Drive File ID after uploading `app-release.apk`!
+
+</div>
 
 ---
 
-## 🎯 Project Aim & Objective
+## 📖 About The Project
 
-The primary objective of this project is to develop an interactive, visually engaging educational tool that enables students to study computer science concepts, test their knowledge, track their learning progress, and persist flashcards offline.
+**FlashCard Quiz** is designed to help learners study efficiently, retain key concepts, and track learning momentum. Built as part of the **CodeAlpha App Development Internship (Task 1)**, the app features an intuitive card-flipping interface, real-time statistics telemetry, dark mode support, and offline persistence.
 
 ---
 
 ## ✨ Key Features
 
-### 🃏 Interactive Flashcard Experience
-- **3D Card Flip Animation**: Smooth 60 FPS rotation along the Y-axis revealing the answer.
-- **Card Navigation**: Effortless Next and Previous controls with active progress indicator.
-- **Answer Revelation Toggle**: Seamless "Show Answer" and "Hide Answer" button interaction.
-- **Smart Progress Tracking**: Real-time progress bar showing active flashcard position.
-
-### 📚 Complete Flashcard Management (CRUD)
-- **Create**: Add new flashcards with customizable question and answer fields.
-- **Read**: Browse all flashcards with instantaneous live search filtering.
-- **Update**: Edit existing flashcard content with pre-filled inputs and real-time validation.
-- **Delete**: Remove unwanted flashcards with animated list updates and confirmation modals.
-
-### 📊 Learning Statistics & Micro-Interactions
-- **Total Cards Counter**: Live tracking of the current total card collection.
-- **Study Streak Tracking**: Calculates continuous daily study sessions automatically.
-- **Cards Reviewed Counter**: Persists total cards reviewed across all sessions.
-- **Micro-Interactions**: Button scale on press, smooth transitions, and feedback snackbars.
-
-### 🌙 Premium Light & Dark Themes
-- Built-in **Material 3 Theme System** with Deep Indigo, Violet, and Cyan color palette.
-- **Theme Preferences**: Switch seamlessly between Light, Dark, and System Default modes with instant state update and local persistence.
-
-### 💾 Local Data Persistence & First-Run Seeding
-- Powered by **Hive** for fast offline object storage.
-- Auto-seeds **10 high-quality Computer Science flashcards** on initial app launch.
-
----
-
-## 🛠️ Technology Stack
-
-| Component | Technology / Package |
-| :--- | :--- |
-| **Framework** | [Flutter](https://flutter.dev) (v3.38.3) |
-| **Language** | [Dart](https://dart.dev) (v3.10.1) |
-| **State Management** | [Provider](https://pub.dev/packages/provider) |
-| **Local Storage** | [Hive](https://pub.dev/packages/hive) & [Hive Flutter](https://pub.dev/packages/hive_flutter) |
-| **Preferences** | [Shared Preferences](https://pub.dev/packages/shared_preferences) |
-| **Identifier Generator** | [UUID](https://pub.dev/packages/uuid) |
-| **Design Language** | Material 3 Design System |
-
----
-
-## 📁 Project Structure
-
-```
-CodeAlpha_FlashcardQuizApp/
-├── android/
-├── ios/
-├── web/
-├── windows/
-├── lib/
-│   ├── main.dart                       # App entry point & initialization
-│   ├── models/
-│   │   └── flashcard.dart              # Flashcard data model & serialization
-│   ├── services/
-│   │   ├── storage_service.dart        # Hive database CRUD operations & seeding
-│   │   └── preferences_service.dart    # Shared preferences & streak logic
-│   ├── providers/
-│   │   ├── flashcard_provider.dart     # Flashcard collection state & study stats
-│   │   └── theme_provider.dart         # Reactive light/dark theme manager
-│   ├── theme/
-│   │   ├── app_colors.dart             # Palette definitions & gradients
-│   │   └── app_theme.dart              # Material 3 light/dark theme configuration
-│   ├── utils/
-│   │   └── validators.dart             # Input validation helpers
-│   ├── widgets/
-│   │   ├── flashcard_widget.dart       # 3D Flip Flashcard widget
-│   │   ├── stat_card.dart              # Dashboard metric card
-│   │   ├── flashcard_list_item.dart    # Manageable list item widget
-│   │   ├── custom_button.dart          # Scale-animated interactive button
-│   │   ├── empty_state.dart            # Placeholder empty state view
-│   │   └── animated_progress.dart      # Progress bar indicator
-│   └── screens/
-│       ├── splash_screen.dart          # Animated splash screen
-│       ├── main_navigation_screen.dart # Bottom NavigationBar shell
-│       ├── home_screen.dart            # Main dashboard & interactive study view
-│       ├── flashcards_screen.dart      # Flashcards collection management & search
-│       ├── add_edit_flashcard_screen.dart # Form for creating/editing cards
-│       └── settings_screen.dart        # Theme & app information settings
-├── test/
-│   └── flashcard_test.dart             # Unit test suite
-├── README.md                           # GitHub README documentation
-└── PROJECT_DOCUMENTATION.md            # Internship technical documentation
-```
-
----
-
-## ⚡ Installation & Execution Guide
-
-### Prerequisites
-- [Flutter SDK](https://docs.flutter.dev/get-started/install) installed (v3.0.0 or higher)
-- Android Studio / VS Code with Flutter extension
-- Android Emulator / Physical Device / Windows desktop runner
-
-### Step-by-Step Setup
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/your-username/CodeAlpha_FlashcardQuizApp.git
-   cd CodeAlpha_FlashcardQuizApp
-   ```
-
-2. **Fetch Dependencies**
-   ```bash
-   flutter pub get
-   ```
-
-3. **Run Code Analysis & Test Suite**
-   ```bash
-   flutter analyze
-   flutter test
-   ```
-
-4. **Launch the Application**
-   ```bash
-   flutter run
-   ```
+- 🧠 **Interactive 3D Card Flipper**: Seamlessly flip between questions and answers with smooth physics-based animations.
+- 📊 **Live Telemetry & Dashboard**: Real-time tracking of Total Cards, Study Streak (days), Reviewed Count, and Completion Rate.
+- 🔍 **Instant Search & Filtering**: Query both questions and answers instantly with zero latency.
+- 🛠️ **Full CRUD Management**: Easily create, edit, update, and delete flashcards.
+- 🎨 **Adaptive Dark & Light Themes**: Built with Material 3 design system with dynamic theme switching.
+- 💾 **Offline Storage & Persistence**: Local data persistence powered by `Hive` and `SharedPreferences`.
 
 ---
 
 ## 📸 Application Screenshots
 
-> *Add application screenshots and demo GIFs here for LinkedIn / GitHub portfolio.*
+| 🏠 Home & Telemetry Dashboard | 🎴 Flashcard Quiz View | 🔍 Flashcard Manager & Search |
+| :---: | :---: | :---: |
+| <img src="https://raw.githubusercontent.com/VedantWasalwar/FlashCard-Quiz/main/assets/images/app_logo.png" width="220"/> | <img src="https://raw.githubusercontent.com/VedantWasalwar/FlashCard-Quiz/main/assets/images/app_logo.png" width="220"/> | <img src="https://raw.githubusercontent.com/VedantWasalwar/FlashCard-Quiz/main/assets/images/app_logo.png" width="220"/> |
 
 ---
 
-## 🔮 Future Enhancements
+## 🛠️ Tech Stack & Architecture
 
-- **Deck Categorization**: Group flashcards into specific topics (e.g. Flutter, Algorithms, Web Development).
-- **Import / Export**: Backup and restore flashcards via JSON or CSV files.
-- **Audio Pronunciation**: Text-to-speech support for answer reading.
-- **Spaced Repetition Algorithm (SM-2)**: Optimize revision schedules based on memory strength.
+- **Framework**: [Flutter SDK](https://flutter.dev) (Channel stable)
+- **Language**: [Dart](https://dart.dev)
+- **State Management**: [`Provider`](https://pub.dev/packages/provider)
+- **Local Database**: [`Hive`](https://pub.dev/packages/hive) & [`hive_flutter`](https://pub.dev/packages/hive_flutter)
+- **Preferences**: [`shared_preferences`](https://pub.dev/packages/shared_preferences)
+- **UI Components**: Material Design 3, Custom Animated Builders
 
 ---
 
-## 👨‍💻 Author & Internship Details
+## 🚀 Getting Started
 
-- **Task Name**: Task 1 – FlashCard Quiz Application
-- **Internship Program**: CodeAlpha App Development Internship
-- **Developer**: Vedant
-- **Repository**: `CodeAlpha_FlashcardQuizApp`
+### Prerequisites
+
+Make sure you have Flutter installed on your machine:
+```bash
+flutter --version
+```
+
+### Installation & Local Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/VedantWasalwar/FlashCard-Quiz.git
+   cd FlashCard-Quiz
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   flutter pub get
+   ```
+
+3. **Run the App:**
+   - **Chrome (Web):**
+     ```bash
+     flutter run -d chrome
+     ```
+   - **Android Device / Emulator:**
+     ```bash
+     flutter run
+     ```
+   - **Windows Desktop:**
+     ```bash
+     flutter run -d windows
+     ```
+
+---
+
+## 📦 Building Release APK for Android
+
+To build a standalone production APK:
+
+```bash
+flutter build apk --release
+```
+
+The compiled APK will be available at:  
+`build/app/outputs/flutter-apk/app-release.apk`
+
+### 📲 How to Create a Direct Google Drive Download Link:
+1. Upload `app-release.apk` to **Google Drive**.
+2. Set permission: `Anyone with the link`.
+3. Copy the link: `https://drive.google.com/file/d/FILE_ID/view?usp=sharing`
+4. Convert to Direct Download link:  
+   `https://drive.google.com/uc?export=download&id=FILE_ID`
+
+---
+
+## 📂 Project Structure
+
+```text
+FlashCard-Quiz/
+├── android/                 # Android native code & config
+├── assets/
+│   └── images/
+│       └── app_logo.png     # Application Logo
+├── lib/
+│   ├── models/              # Data Models (Flashcard)
+│   ├── providers/           # State Management (FlashcardProvider, ThemeProvider)
+│   ├── screens/             # UI Screens (HomeScreen, FlashcardsScreen, SettingsScreen, SplashScreen)
+│   ├── services/            # Storage & Preference Services (Hive & SharedPreferences)
+│   ├── theme/               # Color Palettes & App Themes
+│   ├── utils/               # Form Validators & Helpers
+│   ├── widgets/             # Reusable UI Widgets (StatCard, FlashcardWidget, AnimatedProgress)
+│   └── main.dart            # Entry Point
+├── pubspec.yaml             # Project Dependencies & Assets
+└── README.md                # Documentation
+```
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**. See `LICENSE` for more information.
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ by <b>Vedant Wasalwar</b> for CodeAlpha Task 1</sub>
+</div>
